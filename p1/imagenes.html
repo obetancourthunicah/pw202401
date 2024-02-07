@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Uso de imagenes en HTML</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Imagenes en HTML</h1>
+        <img src="https://placehold.co/320x320" alt="Codigo HTML para mostrar imagenes"/>
+        <img src="imgs/food_dk.jpg" alt="ensalada de frutas" >
+
+        <h2>Imagenes Responsive</h2>
+        <picture>
+            <source srcset="imgs/ocean_dawn_lg.jpg" media="(min-width: 1024px)">
+            <source srcset="imgs/ocean_dawn_md.jpg" media="(min-width: 480px)">
+            <img src="imgs/ocean_dawn_sm.jpg" alt="ensalada de frutas" >
+        </picture>
+    </body>
+</html>

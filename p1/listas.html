@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Listas Ordenadas y No Ordenadas</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Listas en HTML</h1>
+        <h2>Listas Ordenadas</h2>
+        <h3>Mejores Equipos del Mundo</h3>
+        <ol>
+            <li>Manchester City</li>
+            <li>Real Madrid</li>
+            <li>Barcelona</li>
+            <li>Bayern Munich</li>
+            <li>Manchester United</li>
+            <li>Chelsea</li>
+        </ol>
+        <h2>Listas No Ordenadas</h2>
+        <h3>Compras para la fiesta del Viernes</h3>
+        <ul>
+            <li>Carne</li>
+            <li>Pollo</li>
+            <li>Papas</li>
+            <li>Sal</li>
+            <li>Mayonesa</li>
+            <li>Carpa</li>
+            <li>Música</li>
+            <li>Luces</li>
+            <li>Decoración</li>
+            <li>Invitados</li>
+        </ul>
+
+        <h3>Ejemplo algo complejo</h3>
+        <ol>
+            <li>
+                Capitulo 1
+                <ol>
+                    <li>Tema 1.1</li>
+                    <li>Tema 1.2</li>
+                </ol>
+            </li>
+            <li>
+                Capitulo 2
+                <ol>
+                    <li>Tema 2.1</li>
+                    <li>Tema 2.2</li>
+                </ol>
+            </li>
+        </ol>
+        <h2>Tablas en HTML</h2>
+        <table border="2">
+            <tr>
+                <td>1.1</td>
+                <td>1.2</td>
+                <td>1.3</td>
+            </tr>
+            <tr>
+                <td>2.1</td>
+                <td>2.2</td>
+                <td>2.3</td>
+            </tr>
+            <tr>
+                <td>3.1</td>
+                <td>3.2</td>
+                <td>3.3</td>
+            </tr>
+        </table>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Codigo</th>
+                    <th>Descripcion</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>001</td>
+                    <td>Producto 1</td>
+                    <td>Activo</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>002</td>
+                    <td>Producto 2</td>
+                    <td>Inactivo</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>003</td>
+                    <td>Producto 3</td>
+                    <td>Activo</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">Total de Productos: 3</td>
+                </tr>
+            </tfoot>
+        </table>
+
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Zona</th>
+                    <th>Depto</th>
+                    <th>Ventas</th>
+                    <th>Ventas Regional</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="3">Norte</td>
+                    <td>Atlantida</td>
+                    <td>1000</td>
+                    <td rowspan="3">5000</td>
+                </tr>
+                <tr>
+                    <td>Cortes</td>
+                    <td>3000</td>
+                </tr>
+                <tr>
+                    <td>Santa Barbara</td>
+                    <td>1000</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Sur</td>
+                    <td>Valle</td>
+                    <td>4000</td>
+                    <td rowspan="2">6000</td>
+                </tr>
+                <tr>
+                    <td>Choluteca</td>
+                    <td>2000</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
