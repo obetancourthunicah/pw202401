@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formularios</h1>
+    <form action="formulario.html" method="POST">
+        <label for="txtNombre">Nombre</label>
+        <input type="text" name="txtNombre" id="txtNombre" placeholder="Nombre Completo"/>
+        <br/>
+        <label for="intEdad">Edad</label>
+        <input type="number" min="0" max="100" step="5" name="intEdad" id="intEdad" placeholder="0-100" />
+        <br/>
+        <label for="txtCorreo">Correo</label>
+        <input type="email" name="txtCorreo" id="txtCorreo" placeholder="correo@electr.nico" />
+        <br/>
+        <label for="txtFecha">Fecha</label>
+        <input type="date" name="txtFecha" id="txtFecha" />
+        <br/>
+        <fieldset>
+            <label>Color Favorito</label><br/>
+            <input type="radio" name="enumColor" value="rojo" id="colorRojo"/>
+            &nbsp;<label for="colorRojo">Rojo</label>
+            <input type="radio" name="enumColor" value="azul" id="colorAzul"/>
+            &nbsp;<label for="colorAzul">Azul</label>
+            <input type="radio" name="enumColor" value="verde" id="colorVerde"/>
+            &nbsp;<label for="colorVerde">Verde</label>
+            <br/>
+
+            <label for="cmbCiudad">Ciudad</label>
+            <select name="cmbCiudad">
+                <option value="0">Seleccione</option>
+                <option value="1">Lima</option>
+                <option value="2" selected>Arequipa</option>
+                <option value="3">Cusco</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Hobbies</legend>
+            <input type="checkbox" name="chkCine" value="cine" id="hobbyCine"/>
+            &nbsp;<label for="hobbyCine">Cine</label>
+            <input type="checkbox" name="chkDeporte" value="deporte" id="hobbyDeporte"/>
+            &nbsp;<label for="hobbyDeporte">Deporte</label>
+            <input type="checkbox" name="chkLectura" value="lectura" id="hobbyLectura"/>
+            &nbsp;<label for="hobbyLectura">Lectura</label>
+        </fieldset>
+        <br/>
+        <label for="txtComentario">Comentario</label>
+        <textarea name="txtComentario" id="txtComentario"
+            rows="5" cols="30" placeholder="Comentario"
+        ></textarea>
+        <button type="submit" name="btnEnviar">Enviar</button>
+    </form>
+</body>
+</html>
