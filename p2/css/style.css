@@ -1,0 +1,36 @@
+body {
+    margin:0;
+    padding:0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color:#000;
+    color:#fff;
+}
+
+header h1 {
+    margin:0;
+    padding:10px;
+    font-size: 1.25rem;
+}
+
+header nav ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+
+header nav ul li {
+    display:inline;
+    margin:0;
+    padding:0;
+}
+
+header nav ul li a {
+    display: inline-block;
+    color:#fff;
+    text-decoration:none;
+    padding:0.8rem 1rem;
+}
+
