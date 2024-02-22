@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 body {
     margin:0;
     padding:0;
@@ -36,7 +39,7 @@ header nav ul li a {
 
 
 #start {
-    background-color: #030387;
+    background-color: #eee;
     color: #fff;
 }
 
@@ -59,7 +62,7 @@ header nav ul li a {
     background-color: #f4f4f4;
 }
 
-.todoCards .card {
+.card {
     box-sizing: border-box;
     flex: 1 1 30%;
     max-width: 200px;
@@ -69,10 +72,39 @@ header nav ul li a {
     padding: 0px 0.5rem;
 }
 
-.todoCards .card img {
+.card img {
     width:200px;
     height:180px;
     object-fit: cover;
     margin-left:-0.5rem;
     margin-right: -0.5rem;
+}
+
+.boxmodel {
+    background-color: purple;
+    margin: 1rem 2rem;
+    padding: 2.5rem;
+    cursor: pointer;
+    border: 2px solid #0f0;
+    border-bottom: 2px dashed #fff;
+    box-shadow: 5px 5px 10px #000;
+    border-radius:24px;
+}
+.boxmodel:hover {
+    border: 8px solid #0f0;
+}
+
+.roundbtn {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    background-color: blue;
+    color:white;
+    text-align: center;
+    line-height: 4rem;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px #000;
+    cursor: pointer;
+    border: 2px solid #020258;
 }
