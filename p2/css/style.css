@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     margin:0;
     padding:0;
@@ -80,7 +81,7 @@ header nav ul li a {
     margin-right: -0.5rem;
 }
 
-.boxmodel {
+#start .boxmodel {
     background-color: purple;
     margin: 1rem 2rem;
     padding: 2.5rem;
@@ -90,7 +91,7 @@ header nav ul li a {
     box-shadow: 5px 5px 10px #000;
     border-radius:24px;
 }
-.boxmodel:hover {
+#start .boxmodel:hover {
     border: 8px solid #0f0;
 }
 
@@ -107,4 +108,53 @@ header nav ul li a {
     box-shadow: 3px 3px 5px #000;
     cursor: pointer;
     border: 2px solid #020258;
+}
+
+.hero {
+    position: relative;
+    width:100%;
+    padding:0px;
+    margin:0px;
+    box-shadow: 0 3px 5px #000;
+    height: 640px;
+    overflow: hidden;
+}
+
+.hero .textContent {
+    position: absolute;
+    right: 4rem;
+    top: 25%;
+    text-shadow: 1px 1px 2px #fff;
+    color:#fff;
+}
+
+.hero .textContent h2 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+}
+
+.hero .textContent p {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    max-width: 300px;
+ }
+
+.hero .boxmodel{
+    width:100%;
+    height: 100%;
+    padding:0px;
+    margin:0px;
+}
+.hero .boxmodel img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero .roundbtn {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
 }
