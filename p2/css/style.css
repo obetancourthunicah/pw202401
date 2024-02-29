@@ -257,3 +257,21 @@ header nav ul li a {
 .grid .col-12 {
     flex: 0 0 100%;
 }
+
+@media (min-width:768px) {
+ body{
+    background-color: #0f0;
+ }
+}
+
+@media (min-width:1025px) {
+body{
+    background-color: burlywood;
+}
+}
+
+@media (min-width:1200px) {
+body {
+    background-color: #0f0;
+}
+}
