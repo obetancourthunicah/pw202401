@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: "Roboto", Arial, sans-serif;
 }
 
 body {
@@ -256,6 +257,40 @@ header nav ul li a {
 
 .grid .col-12 {
     flex: 0 0 100%;
+}
+
+
+/*Formulario*/
+.field, .actions {
+    display: flex;
+    flex-direction: column;
+    padding:0.5rem 1rem;
+}
+
+.field input, .field textarea {
+    font-size:1rem;
+    padding: 0.5rem;
+}
+
+.actions {
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.actions input[type="submit"] {
+    border: 1px solid #000;
+    background-color: #020258;
+    color:#fff;
+    padding: 0.8rem 1.2rem;
+    box-shadow: 1px 1px 3px #000;
+    display:inline-block;
+    border-radius: 1.76rem;
+}
+
+.modern .field input, .modern .field textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #555;
+    outline: none;
 }
 
 @media (min-width:768px) {
