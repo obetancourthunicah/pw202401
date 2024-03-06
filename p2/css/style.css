@@ -4,39 +4,41 @@
 }
 
 body {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
+
 header {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    background-color:#000;
-    color:#fff;
+    background-color: #000;
+    color: #fff;
 }
 
 header h1 {
-    margin:0;
-    padding:10px;
+    margin: 0;
+    padding: 10px;
     font-size: 1.25rem;
 }
 
 header nav ul {
-    list-style-type:none;
-    margin:0;
-    padding:0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 header nav ul li {
-    display:inline;
-    margin:0;
-    padding:0;
+    display: block;
+    margin: 0;
+    padding: 0;
 }
 
 header nav ul li a {
     display: inline-block;
-    color:#fff;
-    text-decoration:none;
-    padding:0.8rem 1rem;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
 }
 
 
@@ -68,17 +70,17 @@ header nav ul li a {
     box-sizing: border-box;
     flex: 1 1 30%;
     max-width: 200px;
-    margin:0.5rem;
+    margin: 0.5rem;
     border-radius: 5px;
     box-shadow: 3px 3px 5px #000;
     padding: 0px 0.5rem;
 }
 
 .card img {
-    width:200px;
-    height:180px;
+    width: 200px;
+    height: 180px;
     object-fit: cover;
-    margin-left:-0.5rem;
+    margin-left: -0.5rem;
     margin-right: -0.5rem;
 }
 
@@ -90,8 +92,9 @@ header nav ul li a {
     border: 2px solid #0f0;
     border-bottom: 2px dashed #fff;
     box-shadow: 5px 5px 10px #000;
-    border-radius:24px;
+    border-radius: 24px;
 }
+
 #start .boxmodel:hover {
     border: 8px solid #0f0;
 }
@@ -102,7 +105,7 @@ header nav ul li a {
     height: 4rem;
     font-size: 2rem;
     background-color: blue;
-    color:white;
+    color: white;
     text-align: center;
     line-height: 4rem;
     border-radius: 50%;
@@ -113,9 +116,9 @@ header nav ul li a {
 
 .hero {
     position: relative;
-    width:100%;
-    padding:0px;
-    margin:0px;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
     box-shadow: 0 3px 5px #000;
     height: 640px;
     overflow: hidden;
@@ -123,33 +126,35 @@ header nav ul li a {
 
 .hero .textContent {
     position: absolute;
-    right: 4rem;
+    right: 50%;
     top: 25%;
+    transform: translateX(50%);
     text-shadow: 1px 1px 2px #fff;
-    color:#fff;
+    color: #fff;
 }
 
 .hero .textContent h2 {
-    font-size: 3rem;
+    font-size: 1.2rem;
     margin: 0;
     padding: 0;
 }
 
 .hero .textContent p {
-    font-size: 1.5rem;
+    font-size: 0.8rem;
     margin-top: 0.5rem;
     padding: 0.5rem;
-    max-width: 300px;
- }
-
-.hero .boxmodel{
-    width:100%;
-    height: 100%;
-    padding:0px;
-    margin:0px;
+    max-width: 90vw;
 }
-.hero .boxmodel img{
-    width:100%;
+
+.hero .boxmodel {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.hero .boxmodel img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
@@ -160,14 +165,14 @@ header nav ul li a {
     bottom: 1rem;
 }
 
-.fullimg img {
-    width:100%;
+.fullimg {
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 .grid {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-start;
@@ -178,12 +183,7 @@ header nav ul li a {
     padding: 1rem;
 }
 
-.width960 {
-    max-width: 960px;
-    margin: 0 auto;
-}
-
-.flex-center{
+.flex-center {
     justify-self: center;
 }
 
@@ -204,7 +204,7 @@ header nav ul li a {
     align-items: flex-start;
 }
 
-.grid .row.reverse{
+.grid .row.reverse {
     flex-direction: row-reverse;
 }
 
@@ -213,8 +213,9 @@ header nav ul li a {
 }
 
 .grid .col-1 {
-    flex: 0 0 calc(100% / 12 );
+    flex: 0 0 calc(100% / 12);
 }
+
 .grid .col-2 {
     flex: 0 0 calc(100% / 6);
 }
@@ -261,14 +262,16 @@ header nav ul li a {
 
 
 /*Formulario*/
-.field, .actions {
+.field,
+.actions {
     display: flex;
     flex-direction: column;
-    padding:0.5rem 1rem;
+    padding: 0.5rem 1rem;
 }
 
-.field input, .field textarea {
-    font-size:1rem;
+.field input,
+.field textarea {
+    font-size: 1rem;
     padding: 0.5rem;
 }
 
@@ -276,17 +279,19 @@ header nav ul li a {
     flex-direction: row;
     justify-content: flex-end;
 }
+
 .actions input[type="submit"] {
     border: 1px solid #000;
     background-color: #020258;
-    color:#fff;
+    color: #fff;
     padding: 0.8rem 1.2rem;
     box-shadow: 1px 1px 3px #000;
-    display:inline-block;
+    display: inline-block;
     border-radius: 1.76rem;
 }
 
-.modern .field input, .modern .field textarea {
+.modern .field input,
+.modern .field textarea {
     background-color: transparent;
     border: none;
     border-bottom: 2px solid #555;
@@ -294,19 +299,141 @@ header nav ul li a {
 }
 
 @media (min-width:768px) {
- body{
-    background-color: #0f0;
- }
+
+    body {
+        background-color: #0f0;
+    }
+
+    header {
+        flex-direction: row;
+    }
+
+    header nav ul li {
+        display: inline;
+    }
+
+    .hero .textContent {
+        right: 4rem;
+        transform: translateX(0%);
+    }
+
+    .hero .textContent h2 {
+        font-size: 3rem;
+    }
+
+    .hero .textContent p {
+        font-size: 1.5rem;
+        max-width: 300px;
+    }
+
+    .grid .col-m-1 {
+        flex: 0 0 calc(100% / 12);
+    }
+
+    .grid .col-m-2 {
+        flex: 0 0 calc(100% / 6);
+    }
+
+    .grid .col-m-3 {
+        flex: 0 0 calc(100% / 4);
+    }
+
+    .grid .col-m-4 {
+        flex: 0 0 calc(100% / 3);
+    }
+
+    .grid .col-m-5 {
+        flex: 0 0 calc(100% / 12 * 5);
+    }
+
+    .grid .col-m-6 {
+        flex: 0 0 calc(100% / 2);
+    }
+
+    .grid .col-m-7 {
+        flex: 0 0 calc(100% / 12 * 7);
+    }
+
+    .grid .col-m-8 {
+        flex: 0 0 calc(100% / 12 * 8);
+    }
+
+    .grid .col-m-9 {
+        flex: 0 0 calc(100% / 12 * 9);
+    }
+
+    .grid .col-m-10 {
+        flex: 0 0 calc(100% / 12 * 10);
+    }
+
+    .grid .col-m-11 {
+        flex: 0 0 calc(100% / 12 * 11);
+    }
+
+    .grid .col-m-12 {
+        flex: 0 0 100%;
+    }
 }
 
 @media (min-width:1025px) {
-body{
-    background-color: burlywood;
-}
+    body {
+        background-color: burlywood;
+    }
+    .width960 {
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    .grid .col-l-1 {
+        flex: 0 0 calc(100% / 12);
+    }
+
+    .grid .col-l-2 {
+        flex: 0 0 calc(100% / 6);
+    }
+
+    .grid .col-l-3 {
+        flex: 0 0 calc(100% / 4);
+    }
+
+    .grid .col-l-4 {
+        flex: 0 0 calc(100% / 3);
+    }
+
+    .grid .col-l-5 {
+        flex: 0 0 calc(100% / 12 * 5);
+    }
+
+    .grid .col-l-6 {
+        flex: 0 0 calc(100% / 2);
+    }
+
+    .grid .col-l-7 {
+        flex: 0 0 calc(100% / 12 * 7);
+    }
+
+    .grid .col-l-8 {
+        flex: 0 0 calc(100% / 12 * 8);
+    }
+
+    .grid .col-l-9 {
+        flex: 0 0 calc(100% / 12 * 9);
+    }
+
+    .grid .col-l-10 {
+        flex: 0 0 calc(100% / 12 * 10);
+    }
+
+    .grid .col-l-11 {
+        flex: 0 0 calc(100% / 12 * 11);
+    }
+
+    .grid .col-l-12 {
+        flex: 0 0 100%;
+    }
 }
 
 @media (min-width:1200px) {
-body {
-    background-color: #0f0;
-}
+    body {
+        background-color: #f00;
+    }
 }
