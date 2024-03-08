@@ -150,10 +150,11 @@ header nav ul li a:hover {
     position: relative;
     width: 100%;
     padding: 0px;
-    margin: 0px;
+    margin: 0px auto;
     box-shadow: 0 3px 5px #000;
     height: 640px;
     overflow: hidden;
+    animation: popUp 3s ease;
 }
 
 .hero .textContent {
@@ -195,6 +196,7 @@ header nav ul li a:hover {
     position: absolute;
     right: 1rem;
     bottom: 1rem;
+    animation: slideIn 3s infinite alternate-reverse;
 }
 
 .fullimg {
@@ -334,9 +336,16 @@ header nav ul li a:hover {
 
     header {
         flex-direction: row;
+        position:fixed;
+        top:0px;
+        width:100%;
+        z-index: 1000;
     }
     header nav ul {
         display: flex;
+    }
+    main {
+        margin-top: 3rem;
     }
 
     header nav ul li a {
@@ -466,4 +475,51 @@ header nav ul li a:hover {
 
 @media (min-width:1200px) {
    
+}
+
+@keyframes slideIn {
+    0% {
+        right: 100%;
+        bottom: 100%;
+    }
+    18%{
+        right: 85%;
+        bottom: 90%;
+    }
+    20% {
+        right: 80%;
+        bottom: 1rem;
+    }
+    40% {
+        right: 65%;
+        bottom: 80%;
+    }
+    60% {
+        right: 50%;
+        bottom: 1rem;
+    }
+    70% {
+        right: 30%;
+        bottom: 40%;
+    }
+    100% {
+        right: 1rem;
+        bottom: 1rem;
+    }
+}
+
+@keyframes popUp {
+    0% {
+        width:0;
+        height:0;
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+    100%{
+        width:100%;
+        height: auto;
+        opacity: 1;
+        border-radius: 0%;
+    }
 }
