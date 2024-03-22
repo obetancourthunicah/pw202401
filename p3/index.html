@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/carusel.css" />
+    <script>
+        // DOM: -> Document Object Model -> Represantacion (API) Browser para acceder a todos los 
+        // nodos renderizados en el viewport y otros
+        document.addEventListener("DOMContentLoaded", function (e) {
+            document.getElementById("blockJavascript").addEventListener("click", function () {
+                alert("Click desde Bloque");
+            });
+        });
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/carusel.js"></script>
+</head>
+
+<body>
+    <header>
+        <h2>
+            Ejemplo
+        </h2>
+        <nav class="hide">
+            <ul>
+                <li>
+                    <a href="">Opcion 1</a>
+                </li>
+                <li>
+                    <a href="">Opcion 2</a>
+                </li>
+                <li>
+                    <a href="">Opcion 3</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+    <main>
+        <section class="carusel">
+            <section class="caruseltrack">
+                <div class="caruselItem">
+                    <picture>
+                        <source srcset="https://picsum.photos/id/100/1230/960" media="min-width:1025px" />
+                        <source srcset="https://picsum.photos/id/100/1024/680" media="min-width:721px" />
+                        <img src="https://picsum.photos/id/100/480/480" alt="" />
+                    </picture>
+                    <h2>Slide 1</h2>
+                </div>
+                <div class="caruselItem">
+                    <picture>
+                        <source data-srcset="https://picsum.photos/id/200/1230/960" media="min-width:1025px" />
+                        <source data-srcset="https://picsum.photos/id/200/1024/680" media="min-width:721px" />
+                        <img data-srcset="https://picsum.photos/id/200/480/480" alt="" />
+                    </picture>
+                    <h2>Slide 2</h2>
+                </div>
+                <div class="caruselItem">
+                    <picture>
+                        <source data-srcset="https://picsum.photos/id/300/1230/960" media="min-width:1025px" />
+                        <source data-srcset="https://picsum.photos/id/300/1024/680" media="min-width:721px" />
+                        <img data-srcset="https://picsum.photos/id/300/480/480" alt="" />
+                    </picture>
+                    <h2>Slide 3</h2>
+                </div>
+            </section>
+        </section>
+        <div onclick="alert('Hola Mundo Click desde Atributo');">
+            Click ME
+        </div>
+
+        <div id="blockJavascript">
+            Click Me from Block
+        </div>
+        <div>
+            <form>
+                <label for="num1">Numero 1</label>
+                <input type="number" name="num1" id="num1" />
+                <br />
+                <label for="num2">Numero 2</label>
+                <input type="number" name="num2" id="num2" />
+                <br />
+                <button type="button" id="btnProcesar">Procesar</button>
+            </form>
+            <div id="mensaje">
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
