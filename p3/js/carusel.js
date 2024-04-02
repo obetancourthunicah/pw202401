@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
 });
 
 function caruselInit(){
+    let caruselContainer = document.querySelector(".carusel");
     let caruselTrak = document.querySelector(".caruseltrack");
     let caruselItems = document.querySelectorAll(".caruselItem");
     let itemsLoaded = 1;
@@ -13,22 +14,44 @@ function caruselInit(){
         (iteratingItem, index)=>{
             console.log("Iterando Por",iteratingItem);
             if (index !== 0) {
-                let sources = iteratingItem.querySelectorAll('source');
                 let img = iteratingItem.querySelector('img');
-                sources.forEach((src)=>{
-                    src.setAttribute("src", src.dataset['srcset']);
-                });
                 img.setAttribute('src', img.dataset['srcset']);
+
+                let sources = iteratingItem.querySelectorAll('source');
+                sources.forEach((src)=>{
+                    src.setAttribute("srcset", src.dataset['srcset']);
+                });
                 img.addEventListener('load', ()=>{
                     itemsLoaded++;
                     if (itemsLoaded === caruselItems.length) {
-                        // Vamos a iniciar el temporizador
+                        createIndexNavigator();
                         timer();
                     }
                 });
             }
         }
     );
+
+    function createIndexNavigator() {
+        let navigatorContainer = document.createElement("section");
+        navigatorContainer.classList.add(['navigator']);
+        caruselItems.forEach((e, i)=>{
+            let navigatorDot = document.createElement("div");
+            navigatorDot.classList.add(['dot']);
+            navigatorDot.setAttribute('data-navindex', (i).toString(10));
+            navigatorDot.addEventListener("click", onDotNavigateClick);
+            navigatorContainer.appendChild(navigatorDot);
+        });
+        caruselContainer.appendChild(navigatorContainer);
+    }
+
+    function onDotNavigateClick(e){
+        let currentDotIndex = Number(e.target.dataset['navindex']);
+        clearTimeout(iterationId);
+        moveToItem(currentDotIndex);
+        timer();
+    }
+
     let iterationId;
     function timer(){
         iterationId = setTimeout(
@@ -36,7 +59,7 @@ function caruselInit(){
                 nextItem = currentItem + direction;
                 if (nextItem < 0) {
                     nextItem = 1;
-                    direction = 1
+                    direction = 1;
                 }
                 if (nextItem >= caruselItems.length) {
                     nextItem = caruselItems.length - 2;
