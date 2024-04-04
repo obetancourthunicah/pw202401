@@ -18,6 +18,7 @@
     </script>
     <script src="js/script.js"></script>
     <script src="js/carusel.js"></script>
+    <script src="js/validador_form.js"></script>
 </head>
 
 <body>
@@ -89,13 +90,19 @@
             Click Me from Block
         </div>
         <div>
-            <form>
-                <label for="num1">Numero 1</label>
-                <input type="number" name="num1" id="num1" />
+            <form action="" method="get" id="contactForm">
+                <label for="txtNombre">Nombre Completo</label>
+                <input type="text" name="txtNombre" id="txtNombre" />
                 <br />
-                <label for="num2">Numero 2</label>
-                <input type="number" name="num2" id="num2" />
+                <label for="txtCorreo">Correo Electrónico</label>
+                <input type="email" name="txtCorreo" id="txtCorreo" />
                 <br />
+                <label for="txtTelefono">Telefono de Contacto</label>
+                <input type="tel" name="txtTelefono" id="txtTelefono" />
+                <br />
+                <label for="txtBio">Bio</label>
+                <textarea id="txtBio" name="txtBio" id="txtBio"></textarea>
+                <br/>
                 <button type="button" id="btnProcesar">Procesar</button>
             </form>
             <div id="mensaje">

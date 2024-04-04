@@ -87,3 +87,25 @@ header nav.hide{
         max-height: max-content;
     }
 }
+
+form {
+    max-width: 720px;
+    padding:1rem;
+    margin: 1rem auto;
+}
+
+form label {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1rem;
+    min-width: 200px;
+}
+
+form input, form textarea {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border:none ;
+    border-bottom: 1px solid #000;
+    min-width: 420px;
+    outline: none;
+}
